@@ -15,7 +15,8 @@ def apply_Wallpaper(fileName,platform):
         os.system("/usr/bin/gsettings set org.gnome.desktop.background picture-uri "+path)
 
 def get_Wallpaper(platform):
-    result = input("Do you want to change your wallpaper? : ").lower()
+    result = input("Do you want to change your wallpaper? (y/n): ")
+    result = result.lower()
     if not (result == 'y' or result == "yes"):
         return None
     try:
